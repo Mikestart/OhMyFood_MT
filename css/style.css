@@ -9,9 +9,32 @@
     padding: 0;
 }
 
+html {
+    font-size: 80%;
+  }
+
 header {
     font-family: "Shrikhand", sans-serif;
     text-align: center;
     box-shadow: 0rem 0.1rem 0.4rem rgb(0 0 0 / 40%);
     padding-top: 15px;
+    position: relative;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+main .city {
+background-color: #f3f3f3;
+display: flex;
+gap: 8px;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 0.5rem 0;
+}
+
+main .city i {
+    font-size: 1.3rem;
 }
