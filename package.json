@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "sass --watch css/style.scss css/style.css"
   },
   "repository": {
     "type": "git",
@@ -16,7 +16,7 @@
     "url": "https://github.com/Mikestart/OhMyFood_P3/issues"
   },
   "homepage": "https://github.com/Mikestart/OhMyFood_P3#readme",
-  "devDependencies": {
+  "dependencies": {
     "sass": "^1.55.0"
   }
 }
