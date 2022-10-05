@@ -16,7 +16,7 @@
     "url": "https://github.com/Mikestart/OhMyFood_P3/issues"
   },
   "homepage": "https://github.com/Mikestart/OhMyFood_P3#readme",
-  "dependencies": {
+  "devDependencies": {
     "sass": "^1.55.0"
   }
 }
