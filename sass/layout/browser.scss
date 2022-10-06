@@ -1,0 +1,37 @@
+@import "../utils/box-shadow.scss";
+@import "../utils/zoom.scss";
+
+.browse {
+    text-align: center;
+    margin: 0 auto;
+    padding: 2.5rem 12%;
+    background-color: #EDEDED;
+
+    & h2 {
+        margin-top: 0.5rem;
+        font-size: 2rem;
+    }
+
+    & p {
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+
+    & button {
+        cursor: pointer;
+        outline: none;
+        border-radius: 100px;
+        margin: 3rem auto;
+        border: none;
+        padding: 1.2rem 1.5rem;
+        font-size: 1.3rem;
+        color: #FFFF;
+        // box-shadow: 0.2rem 0.8rem 1rem rgb(0 0 0 / 15%);
+        background-image: linear-gradient(to top left, #9356DC, #FF79DA);
+        margin-bottom: 0.5rem;
+        @include shadow;
+        &:hover {
+            @include zoom;
+        }
+    }
+    }
