@@ -1,5 +1,6 @@
 @mixin zoom {
     transform: scale(1.02);
-    opacity: 0.9;
+    // opacity: 0.9;
+    filter: brightness(1.2);
     transition: transform 400ms;
 }

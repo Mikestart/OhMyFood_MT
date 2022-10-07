@@ -1,5 +1,5 @@
-@import "../utils/box-shadow.scss";
-@import "../utils/zoom.scss";
+@use "../utils/box-shadow.scss";
+@use "../utils/zoom.scss";
 
 .browse {
     text-align: center;
@@ -29,9 +29,9 @@
         // box-shadow: 0.2rem 0.8rem 1rem rgb(0 0 0 / 15%);
         background-image: linear-gradient(to top left, #9356DC, #FF79DA);
         margin-bottom: 0.5rem;
-        @include shadow;
         &:hover {
-            @include zoom;
+            @include zoom.zoom;
+            @include box-shadow.shadow;
         }
     }
     }

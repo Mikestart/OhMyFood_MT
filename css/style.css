@@ -64,12 +64,12 @@ header {
   color: white;
   background-image: linear-gradient(to top left, #9356DC, #FF79DA);
   margin-bottom: 0.5rem;
-  box-shadow: 0.2rem 0.8rem 1rem rgba(0, 0, 0, 0.15);
 }
 .browse button:hover {
   transform: scale(1.02);
-  opacity: 0.9;
+  filter: brightness(1.2);
   transition: transform 400ms;
+  box-shadow: 0.2rem 0.8rem 0.8rem rgba(0, 0, 0, 0.3);
 }
 
 footer {
@@ -92,12 +92,12 @@ footer {
   border: 1px solid red;
   flex-grow: 1;
   border-radius: 1rem;
-  box-shadow: 0.2rem 0.8rem 1rem rgba(0, 0, 0, 0.15);
 }
 .tuto li:hover {
   transform: scale(1.02);
-  opacity: 0.9;
+  filter: brightness(1.2);
   transition: transform 400ms;
+  box-shadow: 0.2rem 0.8rem 0.8rem rgba(0, 0, 0, 0.3);
 }
 
 /*# sourceMappingURL=style.css.map */
