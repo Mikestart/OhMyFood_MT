@@ -4,6 +4,7 @@
 ::before,
 ::after {
   box-sizing: border-box;
+  list-style-type: none;
   text-decoration: none;
   margin: 0;
   padding: 0;
@@ -76,9 +77,15 @@ footer {
   text-align: center;
 }
 
+.tuto {
+  counter-reset: steps;
+  padding: 6rem 2rem;
+}
 .tuto ol {
   display: flex;
-  gap: 1rem;
+  margin-left: 10px;
+  width: auto;
+  gap: 2rem;
   justify-content: space-around;
 }
 @media (max-width: 767px) {
@@ -87,17 +94,36 @@ footer {
   }
 }
 .tuto li {
+  position: relative;
   background-color: #f6f6f6;
-  padding: 1rem 2rem;
-  border: 1px solid red;
+  list-style-position: inside;
+  padding: 2.5rem 2rem;
   flex-grow: 1;
   border-radius: 1rem;
+}
+.tuto li::before {
+  content: counter(steps);
+  counter-increment: steps;
+  color: white;
+  background-color: #9356DC;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  height: 1.5rem;
+  width: 1.5rem;
+  left: -1rem;
+  position: absolute;
 }
 .tuto li:hover {
   transform: scale(1.02);
   filter: brightness(1.2);
   transition: transform 400ms;
   box-shadow: 0.2rem 0.8rem 0.8rem rgba(0, 0, 0, 0.3);
+}
+.tuto li i.fas {
+  margin-right: 1rem;
+  color: #7e7e7e;
+  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
