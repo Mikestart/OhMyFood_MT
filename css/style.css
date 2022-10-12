@@ -19,6 +19,15 @@ body {
   line-height: 1.5;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h3, p {
+  margin: 0;
+}
+
 header {
   font-family: "Shrikhand", sans-serif;
   text-align: center;
@@ -74,18 +83,32 @@ header {
 }
 
 footer {
-  text-align: center;
+  margin-top: -2rem;
+  background-color: #353535;
+  color: white;
+  padding: 3rem;
+  line-height: 2rem;
+  font-size: 16px;
+}
+footer h2 {
+  font-family: "shrikhand", "sans-serif";
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 1.5rem;
+}
+footer i.fas {
+  margin-right: 5px;
 }
 
 .tuto {
   counter-reset: steps;
-  padding: 6rem 2rem;
+  padding: 4rem 2rem;
 }
 .tuto ol {
   display: flex;
-  margin-left: 10px;
   width: auto;
   gap: 2rem;
+  padding: 1rem;
   justify-content: space-around;
 }
 @media (max-width: 767px) {
@@ -111,8 +134,10 @@ footer {
   border-radius: 50%;
   height: 1.5rem;
   width: 1.5rem;
-  left: -1rem;
+  left: 0rem;
   position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .tuto li:hover {
   transform: scale(1.02);
@@ -120,10 +145,103 @@ footer {
   transition: transform 400ms;
   box-shadow: 0.2rem 0.8rem 0.8rem rgba(0, 0, 0, 0.3);
 }
+.tuto li#highlight {
+  background: #f5edff;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
 .tuto li i.fas {
   margin-right: 1rem;
   color: #7e7e7e;
   font-size: 1.5rem;
+}
+.tuto li i.fas.fa-mobile-alt {
+  color: #9356DC;
+  text-decoration: dotted;
+}
+
+.menu {
+  background-color: #f6f6f6;
+  padding: 4rem 2rem;
+  margin-bottom: 2rem;
+}
+.menu h2 {
+  margin-bottom: 1rem;
+}
+.menu .menu_cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+@media (max-width: 1000px) {
+  .menu .menu_cards {
+    grid-template-columns: 1fr;
+  }
+}
+.menu .menu_cards .new {
+  position: relative;
+}
+.menu .menu_cards .zoom_effect {
+  border-radius: 13px;
+  background-color: white;
+}
+.menu .menu_cards .zoom_effect:hover {
+  transform: scale(1.02);
+  filter: brightness(1.2);
+  transition: transform 400ms;
+  box-shadow: 0.2rem 0.8rem 0.8rem rgba(0, 0, 0, 0.3);
+}
+.menu .menu_cards .new::before {
+  content: "nouveau";
+  position: absolute;
+  height: 2rem;
+  width: 5rem;
+  background-color: #99E2D0;
+  color: #1b6150;
+  display: grid;
+  place-items: center;
+  right: 1rem;
+  top: 1rem;
+  border-radius: 3px;
+}
+.menu .card_img {
+  height: 15rem;
+  width: 100%;
+  min-width: 27rem;
+  border-radius: 1rem 1rem 0rem 0rem;
+  background-size: cover;
+}
+.menu .card_img_1 {
+  background-image: url(/assets/menu-1.jpg);
+}
+.menu .card_img_2 {
+  background-image: url(/assets/menu-2.jpg);
+}
+.menu .card_img_3 {
+  background-image: url(/assets/menu-3.jpg);
+}
+.menu .card_img_4 {
+  background-image: url(/assets/menu-4.jpg);
+}
+.menu .card_desc {
+  position: relative;
+}
+.menu .card_desc h3, .menu .card_desc p {
+  margin: 0.5rem;
+  margin-left: 15px;
+}
+.menu .card_desc h3 {
+  padding-top: 1.5rem;
+}
+.menu .card_desc p {
+  margin-bottom: 2rem;
+}
+.menu .card_desc i {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /*# sourceMappingURL=style.css.map */

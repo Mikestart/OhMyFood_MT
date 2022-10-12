@@ -1,0 +1,103 @@
+@use "../utils/variables.scss";
+@use "../utils/box-shadow.scss";
+@use "../utils/zoom.scss";
+@use "../utils/colors.scss";
+
+.menu {
+    background-color: #f6f6f6;
+    padding: 4rem 2rem;
+    margin-bottom: 2rem;
+
+    & h2 {
+        margin-bottom: 1rem;
+    }
+
+
+    & .menu_cards {
+        // display: flex;
+        // flex-wrap: wrap;
+        // gap: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        
+
+        @media (max-width: variables.$breakpoint) {
+            grid-template-columns: 1fr;
+
+        }
+
+        .new{
+            position: relative;
+        }
+
+        .zoom_effect {
+
+            border-radius: 13px;
+            background-color: white;
+            &:hover {
+                @include zoom.zoom;
+                @include box-shadow.shadow;
+            }
+            
+        }
+
+        .new::before{
+            content: "nouveau";
+            position: absolute;
+            height: 2rem;
+            width: 5rem;
+            background-color: colors.$green;
+            color: darken(colors.$green, 50%);
+            display: grid;
+            place-items: center;
+            right: 1rem;
+            top: 1rem; 
+            border-radius: 3px;
+        }
+    }
+
+    & .card {
+
+        
+        &_img {
+            height: 15rem;
+            width: 100%;
+            // flex-grow: 1;
+            min-width: 27rem;
+            border-radius: 1rem 1rem 0rem 0rem;
+            background-size: cover;
+           
+        }
+
+
+        @for $i from 1 through 4 {
+            &_img_#{$i} {
+                background-image: url(/assets/menu-#{$i}.jpg);
+            }
+        }
+        &_desc {
+            position: relative;
+            h3, p {
+                margin: 0.5rem;
+                margin-left: 15px;
+                
+            }
+            h3 {
+                padding-top: 1.5rem;
+            }
+            p {
+                margin-bottom: 2rem;
+            }
+
+            & i {
+                font-size: 1.5rem;
+                position: absolute;
+                right: 1rem;
+                top: 50%;
+                transform: translateY(-50%);
+
+            }
+        }
+    }
+}
