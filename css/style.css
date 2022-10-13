@@ -243,5 +243,16 @@ footer i.fas {
   top: 50%;
   transform: translateY(-50%);
 }
+.menu .card_desc .fas {
+  color: transparent;
+  background-image: linear-gradient(pink, rgb(237, 11, 237));
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: 450ms;
+}
+.menu .card_desc .fas:hover {
+  opacity: 1;
+}
 
 /*# sourceMappingURL=style.css.map */

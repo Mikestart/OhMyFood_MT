@@ -96,7 +96,17 @@
                 right: 1rem;
                 top: 50%;
                 transform: translateY(-50%);
-
+            }
+            .fas {
+                color: transparent;
+                background-image: linear-gradient(pink, rgb(237, 11, 237));
+                background-clip: text;
+                -webkit-background-clip: text;
+                opacity: 0;
+                transition: 450ms;
+                &:hover{
+                    opacity: 1;
+                }
             }
         }
     }
