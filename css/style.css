@@ -67,6 +67,7 @@ header {
   cursor: pointer;
   outline: none;
   border-radius: 100px;
+  box-shadow: 0.2rem 0.8rem 0.8rem rgba(0, 0, 0, 0.1);
   margin: 3rem auto;
   border: none;
   padding: 1.2rem 1.5rem;
@@ -74,11 +75,14 @@ header {
   color: white;
   background-image: linear-gradient(to top left, #9356DC, #FF79DA);
   margin-bottom: 0.5rem;
+  transform: scale(1);
+  transition: transform 600ms;
 }
 .browse button:hover {
   transform: scale(1.02);
   filter: brightness(1.2);
   transition: transform 400ms;
+  cursor: pointer;
   box-shadow: 0.2rem 0.8rem 0.8rem rgba(0, 0, 0, 0.3);
 }
 
@@ -119,10 +123,13 @@ footer i.fas {
 .tuto li {
   position: relative;
   background-color: #f6f6f6;
+  box-shadow: 0.2rem 0.8rem 0.8rem rgba(0, 0, 0, 0.1);
   list-style-position: inside;
   padding: 2.5rem 2rem;
   flex-grow: 1;
   border-radius: 1rem;
+  transform: scale(1);
+  transition: transform 600ms;
 }
 .tuto li::before {
   content: counter(steps);
@@ -136,17 +143,18 @@ footer i.fas {
   width: 1.5rem;
   left: 0rem;
   position: absolute;
-  top: 50%;
+  top: 49%;
   transform: translate(-50%, -50%);
 }
 .tuto li:hover {
   transform: scale(1.02);
-  filter: brightness(1.2);
+  filter: brightness(1.02);
   transition: transform 400ms;
+  cursor: pointer;
   box-shadow: 0.2rem 0.8rem 0.8rem rgba(0, 0, 0, 0.3);
 }
 .tuto li#highlight {
-  background: #f5edff;
+  background: #f2eafb;
   font-weight: bold;
   font-size: 1.1rem;
 }
@@ -184,11 +192,14 @@ footer i.fas {
 .menu .menu_cards .zoom_effect {
   border-radius: 13px;
   background-color: white;
+  transform: scale(1);
+  transition: transform 600ms;
 }
 .menu .menu_cards .zoom_effect:hover {
   transform: scale(1.02);
   filter: brightness(1.2);
   transition: transform 400ms;
+  cursor: pointer;
   box-shadow: 0.2rem 0.8rem 0.8rem rgba(0, 0, 0, 0.3);
 }
 .menu .menu_cards .new::before {
@@ -245,7 +256,7 @@ footer i.fas {
 }
 .menu .card_desc .fas {
   color: transparent;
-  background-image: linear-gradient(pink, rgb(237, 11, 237));
+  background-image: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;

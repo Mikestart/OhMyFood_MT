@@ -30,23 +30,25 @@
             width: 1.5rem;
             left: 0rem;
             position: absolute;   
-            top: 50%;
+            top: 49%;
             transform: translate(-50%, -50%);         
         }
 
 
         background-color: #f6f6f6;
+        box-shadow: 0.2rem 0.8rem 0.8rem rgb(0 0 0 / 10%);
         list-style-position: inside;
         padding: 2.5rem 2rem;
         flex-grow: 1;
         border-radius: 1rem;
         &:hover {
-            @include zoom.zoom;
+            @include zoom.zoom(1.02);
             @include box-shadow.shadow;
         }
+        @include zoom.unzoom;
 
         &#highlight{
-            background: #f5edff;
+            background: #f2eafb;
             font-weight: bold;
             font-size: 1.1rem;
         }

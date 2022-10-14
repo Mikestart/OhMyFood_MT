@@ -1,6 +1,18 @@
-@mixin zoom {
+@mixin zoom($bright: 1.2) {
     transform: scale(1.02);
-    // opacity: 0.9;
-    filter: brightness(1.2);
+    filter: brightness($bright);
     transition: transform 400ms;
+    cursor: pointer;
 }
+
+@mixin unzoom {
+    transform: scale(1);
+    transition: transform 600ms;
+}
+
+// @mixin zoom_nav {
+//     transform: scale(1.02);
+//     filter: brightness(1.02);
+//     transition: transform 400ms;
+//     cursor: pointer;
+// }
