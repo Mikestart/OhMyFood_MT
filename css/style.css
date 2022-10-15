@@ -266,4 +266,12 @@ footer i.fas {
   opacity: 1;
 }
 
+img {
+  max-width: 100%;
+}
+
+main h2 {
+  font-family: "Shrikhand", "sans-serif";
+}
+
 /*# sourceMappingURL=style.css.map */
