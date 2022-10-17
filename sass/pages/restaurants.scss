@@ -1,8 +1,25 @@
+@use "../utils/colors.scss";
 
-img{
-    max-width: 100%;
+img {
+    max-width: 50%;
+    border-radius: 30px;
 }
 
 main h2 {
     font-family: "Shrikhand", "sans-serif";
+    position: relative;
+}
+
+.fas {
+    color: transparent;
+    background-image: linear-gradient(colors.$pink, colors.$purple);
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 0;
+    transition: 450ms;
+
+    // transform: translateY(-50%) scale(1.2);
+    &:hover {
+        opacity: 1;
+    }
 }
