@@ -1,25 +1,138 @@
 @use "../utils/colors.scss";
+@use "../utils/box-shadow.scss";
+@use "../utils/animations.scss";
 
-img {
-    max-width: 50%;
-    border-radius: 30px;
-}
 
-main h2 {
-    font-family: "Shrikhand", "sans-serif";
-    position: relative;
-}
 
-.fas {
-    color: transparent;
-    background-image: linear-gradient(colors.$pink, colors.$purple);
-    background-clip: text;
-    -webkit-background-clip: text;
-    opacity: 0;
-    transition: 450ms;
+#resto_pages {
 
-    // transform: translateY(-50%) scale(1.2);
-    &:hover {
-        opacity: 1;
+    background-color: colors.$light_grey;
+
+    .banner img {
+        display: block;
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+        object-position: center;
     }
-}
+
+
+    .resto_section {
+        position: relative;
+        background-color: colors.$light_grey;
+        padding: 1rem 3rem 2rem 2rem;
+        border-radius: 2rem 2rem 0 0;
+        margin-top: -2rem;
+
+
+        h2 {
+            font-family: "Shrikhand", "sans-serif";
+            padding: 0rem 1rem;
+        }
+
+        & i {
+            font-size: 2rem;
+            position: absolute;
+            right: 4rem;
+            top: 34%;
+
+        }
+
+        .fas {
+            color: transparent;
+            background-image: linear-gradient(colors.$pink, colors.$purple);
+            background-clip: text;
+            -webkit-background-clip: text;
+            opacity: 0;
+            transition: 450ms;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+
+    }
+
+    .resto_main {
+        padding: 2rem;
+
+    }
+
+
+    .grille_menus {
+
+        @media (max-width: 1000px) {
+            grid-template-columns: 1fr;
+        }
+
+        ;
+        gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 1rem;
+       
+            
+            & .menu_items {
+                display: flex;
+                overflow: hidden;
+                @include box-shadow.shadow; 
+                background-color: white;
+                border-radius: 1rem;
+                cursor: pointer;
+                
+                
+                & .prix {
+                    margin-left: auto;
+                    font-weight: 900;
+                    padding: 1rem;
+                    display: flex;
+                    align-items: flex-end;
+                }
+    
+                & .menu_item_desc {
+                    padding: 1rem;
+                }
+                
+                & .check{
+                   
+                    display: grid;
+                    place-items: center;
+                    background-color: colors.$green;
+                    margin-right: -5rem;
+                    width: 5rem;
+                    border-radius: 0 1rem 1rem 0;
+                    transition: margin-right 0.7s;
+
+                    & i {
+                        display: grid;
+                        place-items: center;
+                        background: white;
+                        width: 2rem;
+                        height: 2rem;
+                        border-radius: 1rem;
+                        color: colors.$green;
+                        animation: unspin 0.5s ease-in-out;
+                        @include animations.unspin;
+                    }
+                    
+                }
+                &:hover {
+                    .check{
+                        margin-right: 0;
+                    }
+                    
+                    & i {
+                        @include animations.spin;
+                        animation: spin 0.7s ease-in-out;
+                    }
+                }
+    
+    
+            }
+    
+            .footer_resto {
+                margin-top: 0;
+            }
+        }
+    }

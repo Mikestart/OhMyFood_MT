@@ -18,5 +18,8 @@
   "homepage": "https://github.com/Mikestart/OhMyFood_P3#readme",
   "devDependencies": {
     "sass": "^1.55.0"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
   }
 }

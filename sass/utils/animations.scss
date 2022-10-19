@@ -1,0 +1,21 @@
+@mixin spin {
+
+    @keyframes spin {
+        0% {
+            transform: rotate(-280deg);
+        }
+        100% {
+            transform: rotate(0);
+        }
+    }
+
+}
+
+@mixin unspin {
+@keyframes unspin {
+   
+    100% {
+        transform: rotate(150deg);
+    }
+}
+}
