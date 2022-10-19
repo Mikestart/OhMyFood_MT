@@ -1,0 +1,26 @@
+@use "../utils/zoom.scss";
+@use "../utils/box-shadow.scss";
+
+@mixin button_order{
+
+    & button {
+        cursor: pointer;
+        outline: none;
+        border-radius: 100px;
+        box-shadow: 0.2rem 0.8rem 0.8rem rgb(0 0 0 / 10%);
+        margin: 3rem auto;
+        border: none;
+        padding: 1.2rem 1.5rem;
+        font-size: 1.3rem;
+        color: #FFFF;
+        // box-shadow: 0.2rem 0.8rem 1rem rgb(0 0 0 / 15%);
+        background-image: linear-gradient(to top left, #9356DC, #FF79DA);
+        margin-bottom: 0.5rem;
+        &:hover {
+            @include zoom.zoom;
+            @include box-shadow.shadow;
+        }
+        @include zoom.unzoom;
+    }
+
+}

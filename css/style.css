@@ -310,7 +310,7 @@ footer i.fas {
 #resto_pages .grille_menus {
   gap: 1rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   padding: 1rem;
 }
 @media (max-width: 1000px) {
@@ -318,10 +318,28 @@ footer i.fas {
     grid-template-columns: 1fr;
   }
 }
+#resto_pages .grille_menus h3 {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+#resto_pages .grille_menus h3::after {
+  content: "";
+  position: absolute;
+  top: 1.7rem;
+  left: 0rem;
+  height: 0.25rem;
+  width: 3rem;
+  background-color: #99E2D0;
+}
+#resto_pages .grille_menus .menu_category {
+  overflow: hidden;
+}
 #resto_pages .grille_menus .menu_items {
   display: flex;
+  box-shadow: 0.28rem 0.2rem 0.8rem rgba(123, 121, 121, 0.3);
   overflow: hidden;
-  box-shadow: 0.2rem 0.8rem 0.8rem rgba(0, 0, 0, 0.3);
+  margin: 1rem;
   background-color: white;
   border-radius: 1rem;
   cursor: pointer;
@@ -335,10 +353,20 @@ footer i.fas {
 }
 #resto_pages .grille_menus .menu_items .menu_item_desc {
   padding: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#resto_pages .grille_menus .menu_items .menu_item_desc h4,
+#resto_pages .grille_menus .menu_items .menu_item_desc p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 #resto_pages .grille_menus .menu_items .check {
   display: grid;
   place-items: center;
+  flex-shrink: 0;
   background-color: #99E2D0;
   margin-right: -5rem;
   width: 5rem;
@@ -364,11 +392,11 @@ footer i.fas {
   margin-right: 0;
 }
 #resto_pages .grille_menus .menu_items:hover i {
-  animation: spin 0.7s ease-in-out;
+  animation: spin 0.5s ease-in-out;
 }
 @keyframes spin {
   0% {
-    transform: rotate(-280deg);
+    transform: rotate(-180deg);
   }
   100% {
     transform: rotate(0);
@@ -376,6 +404,31 @@ footer i.fas {
 }
 #resto_pages .grille_menus .footer_resto {
   margin-top: 0;
+}
+#resto_pages div #commander {
+  height: 40vh;
+}
+#resto_pages div #commander button button {
+  cursor: pointer;
+  outline: none;
+  border-radius: 100px;
+  box-shadow: 0.2rem 0.8rem 0.8rem rgba(0, 0, 0, 0.1);
+  margin: 3rem auto;
+  border: none;
+  padding: 1.2rem 1.5rem;
+  font-size: 1.3rem;
+  color: white;
+  background-image: linear-gradient(to top left, #9356DC, #FF79DA);
+  margin-bottom: 0.5rem;
+  transform: scale(1);
+  transition: transform 600ms;
+}
+#resto_pages div #commander button button:hover {
+  transform: scale(1.02);
+  filter: brightness(1.2);
+  transition: transform 400ms;
+  cursor: pointer;
+  box-shadow: 0.2rem 0.8rem 0.8rem rgba(0, 0, 0, 0.3);
 }
 
 /*# sourceMappingURL=style.css.map */

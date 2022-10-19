@@ -1,6 +1,8 @@
 @use "../utils/colors.scss";
 @use "../utils/box-shadow.scss";
 @use "../utils/animations.scss";
+@use "../utils/buttons.scss";
+@use "../utils/zoom.scss";
 
 
 
@@ -66,73 +68,113 @@
             grid-template-columns: 1fr;
         }
 
-        ;
         gap: 1rem;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr;
         padding: 1rem;
-       
-            
-            & .menu_items {
-                display: flex;
-                overflow: hidden;
-                @include box-shadow.shadow; 
-                background-color: white;
-                border-radius: 1rem;
-                cursor: pointer;
-                
-                
-                & .prix {
-                    margin-left: auto;
-                    font-weight: 900;
-                    padding: 1rem;
-                    display: flex;
-                    align-items: flex-end;
-                }
-    
-                & .menu_item_desc {
-                    padding: 1rem;
-                }
-                
-                & .check{
-                   
-                    display: grid;
-                    place-items: center;
-                    background-color: colors.$green;
-                    margin-right: -5rem;
-                    width: 5rem;
-                    border-radius: 0 1rem 1rem 0;
-                    transition: margin-right 0.7s;
 
-                    & i {
-                        display: grid;
-                        place-items: center;
-                        background: white;
-                        width: 2rem;
-                        height: 2rem;
-                        border-radius: 1rem;
-                        color: colors.$green;
-                        animation: unspin 0.5s ease-in-out;
-                        @include animations.unspin;
-                    }
-                    
-                }
-                &:hover {
-                    .check{
-                        margin-right: 0;
-                    }
-                    
-                    & i {
-                        @include animations.spin;
-                        animation: spin 0.7s ease-in-out;
-                    }
-                }
-    
-    
-            }
-    
-            .footer_resto {
-                margin-top: 0;
+        h3 {
+            position: relative;
+            text-transform: uppercase;
+            font-weight: 400;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 1.7rem;
+                left: 0rem;
+                height: 0.25rem;
+                width: 3rem;
+                background-color: colors.$green;
             }
         }
+
+        & .menu_category {
+            overflow: hidden;
+        }
+
+
+        & .menu_items {
+            display: flex;
+            box-shadow: 0.28rem 0.2rem 0.8rem rgba(123, 121, 121, 0.3);
+            overflow: hidden;
+            margin: 1rem;
+            background-color: white;
+            border-radius: 1rem;
+            cursor: pointer;
+
+
+            & .prix {
+                margin-left: auto;
+                font-weight: 900;
+                padding: 1rem;
+                display: flex;
+                align-items: flex-end;
+            }
+
+            & .menu_item_desc {
+                padding: 1rem;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+
+                h4,
+                p {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+            }
+
+            & .check {
+
+                display: grid;
+                place-items: center;
+                flex-shrink: 0;
+                background-color: colors.$green;
+                margin-right: -5rem;
+                width: 5rem;
+                border-radius: 0 1rem 1rem 0;
+                transition: margin-right 0.7s;
+
+                & i {
+                    display: grid;
+                    place-items: center;
+                    background: white;
+                    width: 2rem;
+                    height: 2rem;
+                    border-radius: 1rem;
+                    color: colors.$green;
+                    animation: unspin 0.5s ease-in-out;
+                    @include animations.unspin;
+                }
+
+            }
+
+            &:hover {
+                .check {
+                    margin-right: 0;
+                }
+
+                & i {
+                    @include animations.spin;
+                    animation: spin 0.5s ease-in-out;
+                }
+            }
+
+
+        }
+
+        .footer_resto {
+            margin-top: 0;
+        }
     }
+
+    div #commander{
+        height: 40vh;
+        & button{
+
+            @include buttons.button_order;
+        }
+    }
+}
