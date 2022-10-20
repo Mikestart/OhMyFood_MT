@@ -4,6 +4,7 @@
         0% {
             transform: rotate(-180deg);
         }
+
         100% {
             transform: rotate(0);
         }
@@ -12,10 +13,20 @@
 }
 
 @mixin unspin {
-@keyframes unspin {
-   
-    100% {
-        transform: rotate(150deg);
+    @keyframes unspin {
+
+        100% {
+            transform: rotate(150deg);
+        }
     }
 }
+
+@keyframes appear {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }

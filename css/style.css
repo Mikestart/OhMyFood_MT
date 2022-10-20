@@ -266,8 +266,32 @@ footer i.fas {
   opacity: 1;
 }
 
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 #resto_pages {
   background-color: #f6f6f6;
+  position: relative;
+}
+#resto_pages header:hover::before {
+  transform: scale(1.6);
+  transform: translateY(-50%);
+}
+#resto_pages header::before {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  content: "\f060";
+  transform: translateY(-50%);
+  font-weight: 900;
+  font-size: 20px;
+  font-family: "Font Awesome 5 Free";
+  transition: transform 200ms;
 }
 #resto_pages .banner img {
   display: block;
@@ -310,7 +334,7 @@ footer i.fas {
 #resto_pages .grille_menus {
   gap: 1rem;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   padding: 1rem;
 }
 @media (max-width: 1000px) {
@@ -322,6 +346,7 @@ footer i.fas {
   position: relative;
   text-transform: uppercase;
   font-weight: 400;
+  margin-bottom: 2rem;
 }
 #resto_pages .grille_menus h3::after {
   content: "";
@@ -343,6 +368,17 @@ footer i.fas {
   background-color: white;
   border-radius: 1rem;
   cursor: pointer;
+  animation-fill-mode: both;
+  animation: appear 1s;
+}
+#resto_pages .grille_menus .menu_items:nth-child(1) {
+  animation-delay: 100ms;
+}
+#resto_pages .grille_menus .menu_items:nth-child(2) {
+  animation-delay: 200ms;
+}
+#resto_pages .grille_menus .menu_items:nth-child(3) {
+  animation-delay: 300ms;
 }
 #resto_pages .grille_menus .menu_items .prix {
   margin-left: auto;
@@ -405,10 +441,12 @@ footer i.fas {
 #resto_pages .grille_menus .footer_resto {
   margin-top: 0;
 }
-#resto_pages div #commander {
-  height: 40vh;
+#resto_pages section.commander {
+  height: 30vh;
+  display: grid;
+  place-items: center;
 }
-#resto_pages div #commander button button {
+#resto_pages section.commander button {
   cursor: pointer;
   outline: none;
   border-radius: 100px;
@@ -423,7 +461,7 @@ footer i.fas {
   transform: scale(1);
   transition: transform 600ms;
 }
-#resto_pages div #commander button button:hover {
+#resto_pages section.commander button:hover {
   transform: scale(1.02);
   filter: brightness(1.2);
   transition: transform 400ms;

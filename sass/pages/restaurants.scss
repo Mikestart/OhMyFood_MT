@@ -9,6 +9,27 @@
 #resto_pages {
 
     background-color: colors.$light_grey;
+    position: relative;
+
+    header {
+        
+       &:hover::before{
+        transform: scale(1.6);
+        transform: translateY(-50%);
+       }
+       &::before {
+        position: absolute;
+        top: 50%;
+        left: 1rem;
+        content: "\f060";
+        transform: translateY(-50%);
+        font-weight: 900;
+        font-size: 20px;
+        font-family: "Font Awesome 5 Free";
+        transition: transform 200ms;
+    }
+
+    }
 
     .banner img {
         display: block;
@@ -17,7 +38,6 @@
         object-fit: cover;
         object-position: center;
     }
-
 
     .resto_section {
         position: relative;
@@ -31,6 +51,7 @@
             font-family: "Shrikhand", "sans-serif";
             padding: 0rem 1rem;
         }
+
 
         & i {
             font-size: 2rem;
@@ -70,13 +91,14 @@
 
         gap: 1rem;
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         padding: 1rem;
 
         h3 {
             position: relative;
             text-transform: uppercase;
             font-weight: 400;
+            margin-bottom: 2rem;
 
             &::after {
                 content: "";
@@ -91,10 +113,17 @@
 
         & .menu_category {
             overflow: hidden;
+            
         }
-
-
+        
         & .menu_items {
+            @for $i from 1 through 3 {
+                &:nth-child(#{$i}){
+                    
+                animation-delay: 100ms * $i;
+            }
+        }
+        
             display: flex;
             box-shadow: 0.28rem 0.2rem 0.8rem rgba(123, 121, 121, 0.3);
             overflow: hidden;
@@ -102,7 +131,10 @@
             background-color: white;
             border-radius: 1rem;
             cursor: pointer;
+            animation-fill-mode: both;
+            animation: appear 1s;
 
+            
 
             & .prix {
                 margin-left: auto;
@@ -170,11 +202,32 @@
         }
     }
 
-    div #commander{
-        height: 40vh;
-        & button{
+    & section.commander {
+        height: 30vh;
+        display: grid;
+        place-items: center;
 
-            @include buttons.button_order;
+        & button {
+            cursor: pointer;
+            outline: none;
+            border-radius: 100px;
+            box-shadow: 0.2rem 0.8rem 0.8rem rgb(0 0 0 / 10%);
+            margin: 3rem auto;
+            border: none;
+            padding: 1.2rem 1.5rem;
+            font-size: 1.3rem;
+            color: #FFFF;
+            // box-shadow: 0.2rem 0.8rem 1rem rgb(0 0 0 / 15%);
+            background-image: linear-gradient(to top left, #9356DC, #FF79DA);
+            margin-bottom: 0.5rem;
+
+            &:hover {
+                @include zoom.zoom;
+                @include box-shadow.shadow;
+            }
+
+            @include zoom.unzoom;
+            // @include buttons.button_order;
         }
     }
 }
