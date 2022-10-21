@@ -114,13 +114,16 @@
         & .menu_category {
             overflow: hidden;
             
+            
         }
         
         & .menu_items {
+            
             @for $i from 1 through 3 {
                 &:nth-child(#{$i}){
                     
                 animation-delay: 100ms * $i;
+                
             }
         }
         
@@ -131,8 +134,8 @@
             background-color: white;
             border-radius: 1rem;
             cursor: pointer;
-            animation-fill-mode: both;
             animation: appear 1s;
+            animation-fill-mode: backwards;
 
             
 

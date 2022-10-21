@@ -86,6 +86,37 @@ header {
   box-shadow: 0.2rem 0.8rem 0.8rem rgba(0, 0, 0, 0.3);
 }
 
+.loader {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  background-color: whitesmoke;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.8;
+  animation: disappear 30ms;
+  animation-fill-mode: both;
+  animation-delay: 3s;
+  transform-origin: top;
+}
+.loader i {
+  animation: spin 4s infinite linear;
+  color: transparent;
+  background-image: linear-gradient(#99E2D0, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
+}
+
+@keyframes disappear {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
 footer {
   margin-top: -2rem;
   background-color: #353535;
@@ -268,10 +299,17 @@ footer i.fas {
 
 @keyframes appear {
   0% {
-    transform: scale(0);
+    transform: translateY(-50%);
+    opacity: 0;
   }
   100% {
-    transform: scale(1);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
 #resto_pages {
@@ -368,8 +406,8 @@ footer i.fas {
   background-color: white;
   border-radius: 1rem;
   cursor: pointer;
-  animation-fill-mode: both;
   animation: appear 1s;
+  animation-fill-mode: backwards;
 }
 #resto_pages .grille_menus .menu_items:nth-child(1) {
   animation-delay: 100ms;
