@@ -5,6 +5,7 @@
 .tuto {
     counter-reset: steps;
     padding: 4rem 2rem;
+
     & ol {
         display: flex;
         // margin-left: 10px;
@@ -12,13 +13,16 @@
         gap: 2rem;
         padding: 1rem;
         justify-content: space-around;
+
         @media (max-width: 767px) {
             flex-direction: column;
         }
     }
+
     & li {
         position: relative;
-        &::before{
+
+        &::before {
             content: counter(steps);
             counter-increment: steps;
             color: white;
@@ -29,9 +33,9 @@
             height: 1.5rem;
             width: 1.5rem;
             left: 0rem;
-            position: absolute;   
+            position: absolute;
             top: 49%;
-            transform: translate(-50%, -50%);         
+            transform: translate(-50%, -50%);
         }
 
 
@@ -41,26 +45,31 @@
         padding: 2.5rem 2rem;
         flex-grow: 1;
         border-radius: 1rem;
+
         &:hover {
             @include zoom.zoom(1.02);
             @include box-shadow.shadow;
         }
+
         @include zoom.unzoom;
 
-        &#highlight{
+        &#highlight {
             background: #f2eafb;
             font-weight: bold;
             font-size: 1.1rem;
         }
-       
-        & i.fas{
+
+        & i.fas {
             margin-right: 1rem;
             color: colors.$grey;
             font-size: 1.5rem;
-            &.fa-mobile-alt{
+
+            &.fa-mobile-alt {
                 color: colors.$purple;
                 text-decoration: dotted;
             }
-        };
+        }
+
+        ;
     }
 }

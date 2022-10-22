@@ -24,7 +24,8 @@ a {
   color: inherit;
 }
 
-h3, p {
+h3,
+p {
   margin: 0;
 }
 
@@ -265,7 +266,8 @@ footer i.fas {
 #homepage .menu .card_desc {
   position: relative;
 }
-#homepage .menu .card_desc h3, #homepage .menu .card_desc p {
+#homepage .menu .card_desc h3,
+#homepage .menu .card_desc p {
   margin: 0.5rem;
   margin-left: 15px;
 }

@@ -12,22 +12,23 @@
     position: relative;
 
     header {
-        
-       &:hover::before{
-        transform: scale(1.6);
-        transform: translateY(-50%);
-       }
-       &::before {
-        position: absolute;
-        top: 50%;
-        left: 1rem;
-        content: "\f060";
-        transform: translateY(-50%);
-        font-weight: 900;
-        font-size: 20px;
-        font-family: "Font Awesome 5 Free";
-        transition: transform 200ms;
-    }
+
+        &:hover::before {
+            transform: scale(1.6);
+            transform: translateY(-50%);
+        }
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 1rem;
+            content: "\f060";
+            transform: translateY(-50%);
+            font-weight: 900;
+            font-size: 20px;
+            font-family: "Font Awesome 5 Free";
+            transition: transform 200ms;
+        }
 
     }
 
@@ -113,20 +114,20 @@
 
         & .menu_category {
             overflow: hidden;
-            
-            
+
+
         }
-        
+
         & .menu_items {
-            
+
             @for $i from 1 through 3 {
-                &:nth-child(#{$i}){
-                    
-                animation-delay: 100ms * $i;
-                
+                &:nth-child(#{$i}) {
+
+                    animation-delay: 100ms * $i;
+
+                }
             }
-        }
-        
+
             display: flex;
             box-shadow: 0.28rem 0.2rem 0.8rem rgba(123, 121, 121, 0.3);
             overflow: hidden;
@@ -137,7 +138,7 @@
             animation: appear 1s;
             animation-fill-mode: backwards;
 
-            
+
 
             & .prix {
                 margin-left: auto;

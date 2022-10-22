@@ -1,7 +1,7 @@
 @use "../utils/zoom.scss";
 @use "../utils/box-shadow.scss";
 
-@mixin button_order{
+@mixin button_order {
 
     & button {
         cursor: pointer;
@@ -16,10 +16,12 @@
         // box-shadow: 0.2rem 0.8rem 1rem rgb(0 0 0 / 15%);
         background-image: linear-gradient(to top left, #9356DC, #FF79DA);
         margin-bottom: 0.5rem;
+
         &:hover {
             @include zoom.zoom;
             @include box-shadow.shadow;
         }
+
         @include zoom.unzoom;
     }
 
