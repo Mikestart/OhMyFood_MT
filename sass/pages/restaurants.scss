@@ -85,7 +85,7 @@
 
     .grille_menus {
 
-        @media (max-width: 1000px) {
+        @media (max-width: 992px) {
             grid-template-columns: 1fr;
         }
 
@@ -180,8 +180,8 @@
                     height: 2rem;
                     border-radius: 1rem;
                     color: colors.$green;
-                    animation: unspin 0.5s ease-in-out;
-                    @include animations.unspin;
+                    // animation: unspin 0.5s ease-in-out;
+                    // @include animations.unspin;
                 }
 
             }

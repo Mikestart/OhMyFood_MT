@@ -11,7 +11,7 @@
 }
 
 html {
-  font-size: 80%;
+  font-size: 100%;
 }
 
 body {
@@ -102,10 +102,7 @@ header {
 }
 .loader i {
   animation: spin 4s infinite linear;
-  color: transparent;
-  background-image: linear-gradient(#99E2D0, #FF79DA, #9356DC);
-  background-clip: text;
-  -webkit-background-clip: text;
+  color: brown;
   opacity: 1;
 }
 
@@ -212,7 +209,7 @@ footer i.fas {
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
-@media (max-width: 1000px) {
+@media (max-width: 992px) {
   #homepage .menu .menu_cards {
     grid-template-columns: 1fr;
   }
@@ -375,7 +372,7 @@ footer i.fas {
   grid-template-columns: 1fr 1fr 1fr;
   padding: 1rem;
 }
-@media (max-width: 1000px) {
+@media (max-width: 992px) {
   #resto_pages .grille_menus {
     grid-template-columns: 1fr;
   }
@@ -455,12 +452,6 @@ footer i.fas {
   height: 2rem;
   border-radius: 1rem;
   color: #99E2D0;
-  animation: unspin 0.5s ease-in-out;
-}
-@keyframes unspin {
-  100% {
-    transform: rotate(150deg);
-  }
 }
 #resto_pages .grille_menus .menu_items:hover .check {
   margin-right: 0;

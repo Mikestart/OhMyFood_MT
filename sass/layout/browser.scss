@@ -57,10 +57,7 @@
 
     & i {
         animation: spin 4s infinite linear;
-        color: transparent;
-        background-image: linear-gradient(colors.$green, colors.$pink, colors.$purple);
-        background-clip: text;
-        -webkit-background-clip: text;
+        color: brown;
         opacity: 1;
     }
 
