@@ -103,7 +103,7 @@ header {
 }
 .loader i {
   animation: spin 4s infinite linear;
-  color: brown;
+  color: #9356DC;
   opacity: 1;
 }
 
@@ -306,11 +306,6 @@ footer i.fas {
     opacity: 1;
   }
 }
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
 #resto_pages {
   background-color: #f6f6f6;
   position: relative;
@@ -472,12 +467,12 @@ footer i.fas {
 #resto_pages .grille_menus .footer_resto {
   margin-top: 0;
 }
-#resto_pages section.commander {
+#resto_pages div.commander {
   height: 30vh;
   display: grid;
   place-items: center;
 }
-#resto_pages section.commander button {
+#resto_pages div.commander button {
   cursor: pointer;
   outline: none;
   border-radius: 100px;
@@ -492,7 +487,7 @@ footer i.fas {
   transform: scale(1);
   transition: transform 600ms;
 }
-#resto_pages section.commander button:hover {
+#resto_pages div.commander button:hover {
   transform: scale(1.02);
   filter: brightness(1.2);
   transition: transform 400ms;

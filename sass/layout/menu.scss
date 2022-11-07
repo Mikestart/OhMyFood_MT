@@ -25,7 +25,7 @@
             gap: 2rem;
 
 
-            @media (max-width: variables.$breakpoint) {
+            @media (max-width: variables.$breakpoint_2) {
                 grid-template-columns: 1fr;
 
             }
