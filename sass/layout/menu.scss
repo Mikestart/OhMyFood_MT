@@ -74,7 +74,7 @@
 
             @for $i from 1 through 4 {
                 &_img_#{$i} {
-                    background-image: url(/assets/menu-#{$i}.jpg);
+                    background-image: url(../assets/menu-#{$i}.jpg);
                 }
             }
 
