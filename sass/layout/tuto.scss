@@ -48,15 +48,14 @@
         &:hover {
             @include zoom.zoom(1.02);
             @include box-shadow.shadow;
+            background: #f2eafb;
+            font-weight: bold;
+            & i.fas {
+                color: colors.$purple;
+            }
         }
 
         @include zoom.unzoom;
-
-        &#highlight {
-            background: #f2eafb;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
 
         & i.fas {
             margin-right: 1rem;
@@ -64,7 +63,6 @@
             font-size: 1.5rem;
 
             &.fa-mobile-alt {
-                color: colors.$purple;
                 text-decoration: dotted;
             }
         }

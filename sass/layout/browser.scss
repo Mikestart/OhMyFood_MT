@@ -1,6 +1,7 @@
 @use "../utils/box-shadow.scss";
 @use "../utils/zoom.scss";
 @use "../utils/colors.scss";
+@use "../utils/variables.scss";
 
 .browse {
     text-align: center;
@@ -38,6 +39,22 @@
 
         @include zoom.unzoom;
     }
+
+    #maps {
+        display: none;
+    }
+
+    @media (min-width: 993px) {
+
+        #maps {   
+            display: inline-block;
+            margin-top: 10px;
+            margin-bottom: -25px;
+            width: 100%;
+            border-radius: 30px;
+        }
+    }
+    
 }
 
 .loader {
