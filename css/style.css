@@ -263,16 +263,16 @@ footer i.fas {
   background-size: cover;
 }
 #homepage .menu .card_img_1 {
-  background-image: url(/assets/menu-1.jpg);
+  background-image: url(../assets/menu-1.jpg);
 }
 #homepage .menu .card_img_2 {
-  background-image: url(/assets/menu-2.jpg);
+  background-image: url(../assets/menu-2.jpg);
 }
 #homepage .menu .card_img_3 {
-  background-image: url(/assets/menu-3.jpg);
+  background-image: url(../assets/menu-3.jpg);
 }
 #homepage .menu .card_img_4 {
-  background-image: url(/assets/menu-4.jpg);
+  background-image: url(../assets/menu-4.jpg);
 }
 #homepage .menu .card_desc {
   position: relative;
